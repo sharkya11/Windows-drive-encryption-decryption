@@ -1,0 +1,17 @@
+BitLocker is a full disk encryption feature included with Windows Vista and later. It is designed to protect data by providing encryption for entire volumes. By using BitLocker, you can enhance the security of your data by encrypting the entire drive that your data resides on. BitLocker uses the Trusted Platform Module (TPM), a special microchip in some newer computers that supports advanced security features, to help protect your data and to ensure that a disk has not been tampered with while the system was offline.
+
+Here are key features of BitLocker:
+
+- **Full Disk Encryption**: BitLocker encrypts the entire drive, not just individual files. This means that everything on the drive is protected from unauthorized access if your computer is lost or stolen.
+
+- **Multiple Authentication Modes**: BitLocker supports several modes of authentication. You can use it with a TPM alone, with a TPM plus a PIN, with a TPM plus a USB key, or with just a USB key without a TPM.
+
+- **Recovery Mechanism**: BitLocker provides a recovery mechanism in case you forget your PIN or lose your startup key. During the BitLocker setup process, you're prompted to save or print a recovery key, which can be used to unlock your encrypted drive.
+
+- **Integration with Active Directory**: BitLocker recovery keys can be stored in Active Directory Domain Services (AD DS), allowing administrators to retrieve the key in an emergency.
+
+- **Encrypts Operating System Drives, Fixed Data Drives, and Removable Drives**: BitLocker can encrypt operating system drives, fixed data drives (like internal hard drives), and even removable drives (such as external hard drives and USB flash drives) through BitLocker To Go.
+
+- **Performance**: BitLocker encryption does not significantly degrade system performance because the encryption is hardware accelerated on many newer systems.
+
+BitLocker is aimed primarily at enterprise environments, offering a secure solution for protecting sensitive data in corporate settings. However, it is also available in some consumer versions of Windows, such as Windows 10 Pro and Enterprise, offering protection for personal users who seek to secure their data.
