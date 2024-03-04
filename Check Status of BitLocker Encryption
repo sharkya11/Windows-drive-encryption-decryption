@@ -1,0 +1,33 @@
+To monitor the live progress of BitLocker decryption on a Windows system, you can use the Command Prompt or PowerShell. These tools provide a way to check the current status of the decryption process by executing a simple command. Here's how you can do it:
+
+### Using Command Prompt
+
+1. **Open Command Prompt as Administrator**: Press the Windows key, type "Command Prompt", right-click on it, and select "Run as administrator" from the context menu.
+
+2. **Check Decryption Status**: Type the following command and press Enter:
+
+   ```cmd
+   manage-bde -status
+   ```
+
+   This command displays the status of all drives on your computer. If a drive is currently being decrypted, you'll see its percentage of completion next to the "Percentage Encrypted" field.
+
+### Using PowerShell
+
+1. **Open PowerShell as Administrator**: Press the Windows key, type "PowerShell", right-click on Windows PowerShell in the search results, and select "Run as administrator" from the context menu.
+
+2. **Check Decryption Status**: Type the following command and press Enter:
+
+   ```powershell
+   manage-bde -status
+   ```
+
+   As with Command Prompt, this command shows the status of all drives, including the decryption progress as a percentage next to the "Percentage Encrypted" field.
+
+### Understanding the Output
+
+- **Percentage Encrypted**: This value shows the amount of the drive that is still encrypted. When you're decrypting a drive, this percentage decreases over time. A value of "0%" indicates that decryption is complete, and the drive is no longer encrypted.
+
+- **Conversion Status**: During decryption, this should change from "Fully Encrypted" to "Decryption in Progress" and finally to "Fully Decrypted" once the process is complete.
+
+These methods provide a straightforward way to monitor the progress of BitLocker decryption in real-time, allowing you to see how much of the decryption process has been completed and how much remains. Keep in mind that decryption can take a significant amount of time, especially for large drives or slower systems, so periodic checks can give you a good idea of the progress without constantly watching the screen.
